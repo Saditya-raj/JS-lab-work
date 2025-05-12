@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>LAB WORK</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>LAB WORK</h1>
+  <div class="grid-container">
+
+    <!-- Section: Change Color -->
+    <div class="section-box" id="section1" onclick="toggleBlueGreen()" tabindex="0" role="button" aria-pressed="false" aria-label="Toggle color box">
+      Click me to toggle color
+    </div>
+
+    <!-- Section 2: Grade Calculator -->
+    <div class="section-box" id="section2">
+      <h2>Grade Calculator</h2>
+      <input type="number" id="grade-marks" placeholder="Enter marks (0-100)" min="0" max="100" aria-label="Enter marks for grade calculation" />
+      <button onclick="calculateGrade()" aria-describedby="grade-output">Calculate</button>
+      <div id="grade-output" class="output" aria-live="polite"></div>
+    </div>
+
+    <!-- Section 3: Hands-on Activity JavaScript Operators -->
+    <div class="section-box" id="section3">
+      <h2>JavaScript Operators</h2>
+      <button onclick="performOperations()" aria-describedby="operators-output">Run Activity</button>
+      <div id="operators-output" class="output" aria-live="polite" tabindex="0"></div>
+    </div>
+
+    <!-- Section 4: Variables & Data Types -->
+    <div class="section-box" id="section4">
+      <h2>Variables & Data Types</h2>
+      <label for="name-input">Enter Your Name:</label>
+      <input type="text" id="name-input" placeholder="Enter your name" aria-label="Enter your name" />
+      <label for="number-input" style="margin-top:0.75rem;">Enter a Number:</label>
+      <input type="number" id="number-input" placeholder="Enter a number" aria-label="Enter a number" />
+      <div class="button-group">
+        <button onclick="displayValues()" aria-describedby="variables-output">Submit</button>
+      </div>
+      <div id="variables-output" class="output" aria-live="polite" tabindex="0"></div>
+    </div>
+
+    <!-- Section 5: Multiplication Table -->
+    <div class="section-box" id="section5">
+      <h2>Multiplication Table Generator</h2>
+      <input type="number" id="table-num" placeholder="Enter a number" aria-label="Enter a number for multiplication table" />
+      <button onclick="generateTable()" aria-describedby="table-output">Generate Table</button>
+      <div id="table-output" class="output" aria-live="polite" tabindex="0" style="max-height: 180px; overflow-y: auto;"></div>
+    </div>
+
+    <!-- Section 6: Welcome Alert Box -->
+    <div class="section-box" id="section6">
+      <h2>Welcome Alert</h2>
+      <button onclick="showWelcomeAlert()" aria-describedby="welcome-output">Show Welcome Alert</button>
+    </div>
+
+    <!-- Section 7: Loop Activities & Even/Odd Check -->
+    <div class="section-box" id="section7">
+      <h2>Loop Activities & Even/Odd Check</h2>
+      <label for="even-odd-input">Enter Number to Check Even or Odd:</label>
+      <input type="number" id="even-odd-input" placeholder="Enter a number" aria-label="Enter number for even or odd check" />
+      <button onclick="handleLoopActivities()" aria-describedby="loop-output">Run Activities</button>
+      <div id="loop-output" class="output" aria-live="polite" tabindex="0"></div>
+    </div>
+
+    <!-- Section 8: Dynamic Color Mixer -->
+    <div class="section-box" id="section8">
+      <h2>Dynamic Color Mixer 🎨</h2>
+      <label for="red">Red: <span id="redValue" class="color-value">0</span></label>
+      <input type="range" id="red" min="0" max="255" value="0" oninput="updateColor()" aria-label="Red slider" />
+      <label for="green">Green: <span id="greenValue" class="color-value">0</span></label>
+      <input type="range" id="green" min="0" max="255" value="0" oninput="updateColor()" aria-label="Green slider" />
+      <label for="blue">Blue: <span id="blueValue" class="color-value">0</span></label>
+      <input type="range" id="blue" min="0" max="255" value="0" oninput="updateColor()" aria-label="Blue slider" />
+      <div id="colorBox"></div>
+    </div>
+
+    <!-- Section 9: Additional JS Tasks -->
+    <div class="section-box" id="section9">
+      <h2>JS Functions: Square, Even/Odd</h2>
+      <label for="num">Enter a Number:</label>
+      <input type="number" id="num" placeholder="Enter a number" aria-label="Enter a number" />
+      <div class="button-group">
+        <button onclick="calculateSquare()">Calculate Square</button>
+        <button onclick="checkEvenOdd()">Check Even or Odd</button>
+      </div>
+      <div id="output" class="output" aria-live="polite" tabindex="0"></div>
+    </div>
+
+    <!-- Section 10: Simple Calculator -->
+    <div class="section-box" id="section10">
+      <h2>Simple Calculator</h2>
+      <label for="calc-num1">Number 1:</label>
+      <input type="number" id="calc-num1" placeholder="Enter first number" aria-label="Enter first number" />
+      <label for="calc-num2">Number 2:</label>
+      <input type="number" id="calc-num2" placeholder="Enter second number" aria-label="Enter second number" />
+      <label for="calc-operation">Operation:</label>
+      <select id="calc-operation" aria-label="Select operation">
+        <option value="add">Add (+)</option>
+        <option value="subtract">Subtract (-)</option>
+        <option value="multiply">Multiply (×)</option>
+        <option value="divide">Divide (÷)</option>
+      </select>
+      <button onclick="calculateSimple()" aria-describedby="calc-output">Calculate</button>
+      <div id="calc-output" class="output" aria-live="polite" tabindex="0"></div>
+    </div>
+
+    <!-- Section 11: Light Bulb Toggle -->
+    <div class="section-box" id="section11">
+      <h2>Light Bulb Toggle 💡</h2>
+      
+      <!-- Light Bulb Image -->
+      <img id="bulbImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Light Bulb" style="width: 100px; height: auto; margin: 1rem auto;" />
+      
+      <!-- Button to Toggle Bulb -->
+      <button id="toggleButton">Turn ON</button>
+    </div>
+
+    <!-- Section 12: Real-Time Digital Clock -->
+    <div class="section-box" id="section12">
+      <h2>Real-Time Digital Clock ⏰</h2>
+      
+      <!-- Clock Display -->
+      <div id="clock">00:00:00</div>
+      
+      <!-- Start/Stop Button -->
+      <button id="toggleClock">Start Clock</button>
+    </div>
+
+    <!-- Section 13: Saved Note -->
+    <div class="section-box" id="section13">
+      <h2>Saved Note</h2>
+      <textarea id="noteInput" placeholder="Write your note here..." rows="4" style="width: 100%;"></textarea>
+      <div class="button-group">
+        <button onclick="saveNote()">Save Note</button>
+        <button onclick="clearNote()">Clear Note</button>
+      </div>
+      <div id="displayNote" class="output" aria-live="polite" tabindex="0" style="margin-top: 1rem;"></div>
+    </div>
+
+    <!-- Section 14: Welcome Message -->
+    <div class="section-box" id="section14">
+      <h2>👋 Welcome to Our Site!</h2>
+      <input type="text" id="userName" placeholder="Enter your name" />
+      <button onclick="storeName()">Submit</button>
+      <div id="welcomeMessage" class="output" aria-live="polite" tabindex="0" style="margin-top: 1rem;"></div>
+    </div>
+
+    <!-- Section 15: Task Manager -->
+    <div class="section-box" id="section15">
+      <h2>Task Manager 📝</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task" aria-label="Enter a task" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Section 16: Feedback Form -->
+    <div class="section-box" id="section16">
+      <h2>🌟 Leave Your Feedback</h2>
+      <input type="text" id="name" placeholder="Your Name" aria-label="Enter your name" />
+      <select id="rating" aria-label="Rate us">
+        <option value="">Rate us</option>
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+      </select>
+      <textarea id="feedback" rows="4" placeholder="Your feedback..." aria-label="Enter your feedback"></textarea>
+      <button onclick="submitFeedback()">Submit</button>
+      <div id="feedbackList" style="margin-top: 1rem;"></div>
+    </div>
+
+    <!-- Section 17: Interactive Counter App -->
+    <div class="section-box" id="section17">
+      <h2>Interactive Counter App</h2>
+
+      <!-- Counter Display -->
+      <div id="counter" style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">0</div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button class="increase" onclick="increaseCounter()">Increase</button>
+        <button class="decrease" onclick="decreaseCounter()">Decrease</button>
+        <button class="reset" onclick="resetCounter()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Section 18: Show & Hide Password -->
+    <div class="section-box" id="section18">
+      <h2>Show & Hide Password</h2>
+
+      <!-- Password Input Field -->
+      <input type="password" id="password" placeholder="Enter your password" style="margin-bottom: 1rem;" />
+      <button onclick="togglePassword()">Show Password</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
